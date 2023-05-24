@@ -57,13 +57,13 @@ function App() {
   }
   return (
   <>
-  <Router>
+  <Router basename="/ReactPractise">
     <Navbar title="Textutils" mode={mode} toggleMode={toggleMode}/>
     <Alert alert={alert}/>
     <div className="container my-3">
      <Routes>
         <Route path="/about" element={<About mode={mode}/>} />
-        <Route path="/" element={<TextForm heading="Enter text to analyze" mode={mode} showAlert={showAlert}/>} />
+        <Route exact path="/ReactPractise" element={<TextForm heading="Enter text to analyze" mode={mode} showAlert={showAlert}/>} />
     </Routes>
     </div>
   </Router>
